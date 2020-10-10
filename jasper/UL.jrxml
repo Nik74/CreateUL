@@ -1,0 +1,2121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="UAL" pageWidth="566" pageHeight="841" columnWidth="439" leftMargin="85" rightMargin="42" topMargin="56" bottomMargin="56">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<import value="createul.CreateUL"/>
+	<parameter name="grcNumber" class="java.lang.String"/>
+	<parameter name="grcName" class="java.lang.String"/>
+	<parameter name="grcVersion" class="java.lang.String"/>
+	<parameter name="grcDeveloper" class="java.lang.String"/>
+	<parameter name="grcCheckSumDoc" class="java.lang.String"/>
+	<parameter name="grcFileNameDoc" class="java.lang.String"/>
+	<parameter name="grcCheckSumXml" class="java.lang.String"/>
+	<parameter name="grcFileNameXml" class="java.lang.String"/>
+	<parameter name="grcChecking" class="java.lang.String"/>
+	<parameter name="grcTControl" class="java.lang.String"/>
+	<parameter name="grcNControl" class="java.lang.String"/>
+	<parameter name="grcAffirming" class="java.lang.String"/>
+	<parameter name="grcNumberUL" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band height="17" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="702" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="10" width="35" height="50">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph firstLineIndent="2"/>
+				</textElement>
+				<text><![CDATA[Номер п/п]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="10" width="134" height="50">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Обозначение документа]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="10" width="141" height="50">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Наименование изделия, наименование документа]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="10" width="60" height="50">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Версия]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="10" width="60" height="50">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Номер последнего изменения]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="60" width="35" height="50">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="40" y="60" width="134" height="50"/>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{grcNumber}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="174" y="60" width="141" height="50"/>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{grcName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="315" y="60" width="60" height="50"/>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{grcVersion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="375" y="60" width="60" height="50">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="120" width="120" height="40">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ГОСТ Р 34.11-2012 (256 бит)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="125" y="120" width="310" height="20">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="0.8"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+					<font fontName="GostAproe" size="10"/>
+					<paragraph lineSpacing="Single" firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{grcCheckSumDoc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="170" width="169" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Примечание]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="5" y="190" width="169" height="25"/>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.4" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.4" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{grcFileNameDoc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="174" y="170" width="131" height="70">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="170" width="130" height="70">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="250" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="250" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="250" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="270" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="270" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="270" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="290" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="290" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="290" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="310" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="310" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="310" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="670" width="235" height="22">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Информационно-удостоверяющий лист]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="240" y="670" width="124" height="22"/>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{grcNumberUL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="364" y="670" width="34" height="12">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Лист]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="670" width="37" height="12">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Листов]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="364" y="682" width="34" height="10">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="682" width="37" height="10">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe" size="6"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="250" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="270" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="290" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="310" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="330" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="330" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="330" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="350" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="350" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="350" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="370" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="370" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="370" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="390" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="390" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="390" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="410" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="410" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="410" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="330" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="350" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="370" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="390" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="410" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="430" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="430" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="430" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="450" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="450" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="450" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="470" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="470" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="470" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="490" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="490" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="490" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="510" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="510" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="510" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="430" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="450" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="470" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="490" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="510" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="530" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="530" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="530" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="550" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="550" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="550" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="570" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="570" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="570" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="590" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="590" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="590" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="610" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="610" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="610" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="530" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="550" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="570" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="590" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="610" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="630" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="630" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="630" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="630" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="650" width="175" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="650" width="110" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="650" width="85" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="650" width="60" height="20">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="1.4"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GostAproe" isBold="true"/>
+					<paragraph lineSpacingSize="1.0" firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="125" y="140" width="310" height="20">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.4"/>
+					<topPen lineWidth="0.8"/>
+					<leftPen lineWidth="1.4"/>
+					<bottomPen lineWidth="1.4"/>
+					<rightPen lineWidth="1.4"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+					<font fontName="GostAproe" size="10"/>
+					<paragraph lineSpacing="Single" firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{grcCheckSumXml}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="5" y="215" width="169" height="25"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.4" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.4" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.4" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GostAproe"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{grcFileNameXml}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>
